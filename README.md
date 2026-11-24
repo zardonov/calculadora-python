@@ -1,48 +1,23 @@
-# Calculadora em Python
+# Minha calculadora
 
-Meu primeiro projeto de programação: uma calculadora simples feita em Python para praticar lógica de programação, funções, condicionais e repetição.
+Esse é um dos meus primeiros projetos usando Python. Fiz uma calculadora simples para treinar um pouco de programação.
 
-## Funcionalidades
-
+Ela faz:
 - Soma
 - Subtração
 - Multiplicação
 - Divisão
-- Validação de opções e entradas
-- Tratamento de divisão por zero
-- Aceita vírgula ou ponto como separador decimal
 
-## Requisitos
+Também coloquei uma verificação para não dividir por zero e para avisar quando a pessoa digitar algo que não seja um número.
 
-- Python 3 instalado
+## Como usar
 
-## Como executar
+É preciso ter o Python instalado.
 
-1. Baixe ou clone este repositório.
-2. Abra o terminal na pasta do projeto.
-3. Execute:
+Depois é só abrir o terminal na pasta do projeto e digitar:
 
 ```bash
 python calculadora.py
 ```
 
-Em alguns computadores, o comando pode ser:
-
-```bash
-python3 calculadora.py
-```
-
-## O que pratiquei
-
-- Variáveis e tipos numéricos
-- Funções
-- Estruturas condicionais (`if` / `elif`)
-- Laços de repetição (`while`)
-- Entrada de dados com `input()`
-- Tratamento de erros com `try` / `except`
-
-## Próximas melhorias
-
-- Adicionar cálculo de porcentagem
-- Criar testes automatizados
-- Melhorar a interface
+Estou usando esse projeto para praticar e aprender mais sobre Python.
