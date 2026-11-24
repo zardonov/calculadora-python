@@ -1,52 +1,47 @@
-def mostrar_menu():
-    print("\n=== CALCULADORA ===")
-    print("1 - Somar")
-    print("2 - Subtrair")
-    print("3 - Multiplicar")
-    print("4 - Dividir")
+print("Minha calculadora")
+print("")
+
+while True:
+    print("1 - Soma")
+    print("2 - Subtracao")
+    print("3 - Multiplicacao")
+    print("4 - Divisao")
     print("0 - Sair")
 
+    opcao = input("Escolha uma opcao: ")
 
-def calcular(opcao, numero1, numero2):
-    if opcao == "1":
-        return numero1 + numero2
-    elif opcao == "2":
-        return numero1 - numero2
-    elif opcao == "3":
-        return numero1 * numero2
-    elif opcao == "4":
-        if numero2 == 0:
-            return None
-        return numero1 / numero2
+    if opcao == "0":
+        print("Saindo da calculadora...")
+        break
 
-
-def main():
-    while True:
-        mostrar_menu()
-        opcao = input("Escolha uma opção: ")
-
-        if opcao == "0":
-            print("Obrigado por usar a calculadora!")
-            break
-
-        if opcao not in ("1", "2", "3", "4"):
-            print("Opção inválida. Tente novamente.")
-            continue
-
+    if opcao == "1" or opcao == "2" or opcao == "3" or opcao == "4":
         try:
-            numero1 = float(input("Digite o primeiro número: ").replace(",", "."))
-            numero2 = float(input("Digite o segundo número: ").replace(",", "."))
+            n1 = float(input("Digite o primeiro numero: "))
+            n2 = float(input("Digite o segundo numero: "))
         except ValueError:
-            print("Entrada inválida. Digite apenas números.")
+            print("Digite um numero valido.")
+            print("")
             continue
 
-        resultado = calcular(opcao, numero1, numero2)
+        if opcao == "1":
+            resultado = n1 + n2
+            print("Resultado:", resultado)
 
-        if resultado is None:
-            print("Não é possível dividir por zero.")
-        else:
-            print(f"Resultado: {resultado:g}")
+        elif opcao == "2":
+            resultado = n1 - n2
+            print("Resultado:", resultado)
 
+        elif opcao == "3":
+            resultado = n1 * n2
+            print("Resultado:", resultado)
 
-if __name__ == "__main__":
-    main()
+        elif opcao == "4":
+            if n2 == 0:
+                print("Nao da para dividir por zero.")
+            else:
+                resultado = n1 / n2
+                print("Resultado:", resultado)
+    else:
+        print("Opcao invalida.")
+
+    print("")
